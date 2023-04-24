@@ -31,10 +31,12 @@ fileName.forEach((file) => {
       id: id,
       label: label,
       student_id: session,
-      student_name:student
+      student_name: student,
     });
-    id++
+    fs.writeFileSync(constants.JSON_DIR+"/"+id+".json", JSON.stringify(samples));
+    JSON.stringify(drawings[label])
+    id++;
   }
 });
 
-fs.writeFileSync(constants.SAMPLES,JSON.stringify(samples))
+fs.writeFileSync(constants.SAMPLES, JSON.stringify(samples));
