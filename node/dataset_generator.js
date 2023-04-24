@@ -62,6 +62,7 @@ fs.writeFileSync(constants.SAMPLES, JSON.stringify(samples));
  * @param {number[][][]} paths
  */
 function genrateImageFile(image, paths) {
+  ctx.clearRect(0,0,canvas.width,canvas.height)
   draw.paths(ctx,paths,"black")
   const buffer=canvas.toBuffer("image/png")
   fs.writeFileSync(image,buffer)
