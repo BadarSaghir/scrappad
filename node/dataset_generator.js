@@ -3,27 +3,7 @@ const draw=require("./js/draw")
 const {createCanvas}=require('canvas')
 const canvas= createCanvas(400,400)
 const ctx=canvas.getContext("2d")
-
-const constants = {
-  DATA_DIR: "../data",
-  RAW_DIR: "",
-  DATASET_DIR: "",
-  JSON_DIR: "",
-  IMG_DIR: "",
-  SAMPLES: "",
-};
-
-constants.RAW_DIR = constants.DATA_DIR + "/raw";
-constants.DATASET_DIR = constants.DATA_DIR + "/dataset";
-if (!fs.existsSync(constants.DATASET_DIR)) 
-fs.mkdirSync(constants.DATASET_DIR);
-constants.JSON_DIR = constants.DATASET_DIR + "/json";
-if (!fs.existsSync(constants.JSON_DIR)) 
-fs.mkdirSync(constants.JSON_DIR);
-constants.IMG_DIR = constants.DATASET_DIR + "/img";
-if (!fs.existsSync(constants.DATASET_DIR)) 
-fs.mkdirSync(constants.IMG_DIR);
-constants.SAMPLES = constants.DATASET_DIR + "/samples.json";
+const constants= require("./js/constants")
 
 const fileName = fs.readdirSync(constants.RAW_DIR);
 /**
