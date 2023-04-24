@@ -49,7 +49,7 @@ fileName.forEach((file) => {
       constants.JSON_DIR + "/" + id + ".json",
       JSON.stringify(paths)
     );
-    genrateImageFile(constants.JSON_DIR + "/" + id + ".png",paths)
+    genrateImageFile(constants.IMG_DIR + "/" + id + ".png",paths)
 
     id++;
   }
