@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.11.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0"
   }
 }
