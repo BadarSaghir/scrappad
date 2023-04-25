@@ -6,6 +6,8 @@ const constants = {
     JSON_DIR: "",
     IMG_DIR: "",
     SAMPLES: "",
+    JS_OBJECTS:"../web/js_objects",
+    SAMPLES_JS:""
   };
   
   constants.RAW_DIR = constants.DATA_DIR + "/raw";
@@ -16,5 +18,6 @@ const constants = {
   constants.IMG_DIR = constants.DATASET_DIR + "/img";
   if (!fs.existsSync(constants.IMG_DIR)) fs.mkdirSync(constants.IMG_DIR);
   constants.SAMPLES = constants.DATASET_DIR + "/samples.json";
-
+  constants.SAMPLES_JS = constants.JS_OBJECTS + "/samples.js";
+  if (!fs.existsSync(constants.JS_OBJECTS)) fs.mkdirSync(constants.JS_OBJECTS);
   module.exports=constants

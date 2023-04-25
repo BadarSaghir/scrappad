@@ -38,6 +38,8 @@ fileName.forEach((file) => {
 });
 
 fs.writeFileSync(constants.SAMPLES, JSON.stringify(samples));
+fs.writeFileSync(constants.SAMPLES_JS, `const samples=${JSON.stringify(samples)};`);
+
 
 /**
  * @param {string} image
