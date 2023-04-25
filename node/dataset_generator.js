@@ -1,3 +1,5 @@
+const utils= require("./js/utils");
+
 const fs = require("fs");
 const draw=require("./js/draw")
 const {createCanvas}=require('canvas')
@@ -30,7 +32,7 @@ fileName.forEach((file) => {
       JSON.stringify(paths)
     );
     genrateImageFile(constants.IMG_DIR + "/" + id + ".png",paths)
-
+    utils.printProgress(id,fileName.length*8)
     id++;
   }
 });
